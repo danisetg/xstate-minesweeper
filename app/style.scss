@@ -1,0 +1,88 @@
+.minesweeper-game {
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    background-color: #bdbdbd;
+    border-top: 4px solid white;
+    border-left: 4px solid white;
+    border-right: 4px solid #7b7b7b;
+    border-bottom: 4px solid #7b7b7b;
+    box-sizing: border-box;
+    user-select: none;
+    * {
+        box-sizing: border-box;
+    }
+    .minesweeper-game-header {
+        width: 100%;
+        height: 50px;
+        border-bottom: 3px solid white;
+        border-right: 3px solid white;
+        border-left: 3px solid #7b7b7b;
+        border-top: 3px solid #7b7b7b;
+        margin-bottom: 10px;
+    }
+    .minesweeper-board {
+        width: fit-content;
+        height: fit-content;
+        border-bottom: 3px solid white;
+        border-right: 3px solid white;
+        border-left: 3px solid #7b7b7b;
+        border-top: 3px solid #7b7b7b;
+        .minesweeper-board-row {
+            width: fit-content;
+            height: fit-content;
+            display: flex;
+            .mineswepper-cell {
+                height: 32px;
+                width: 32px;
+                background-color:#bdbdbd;
+                border-top: 3px solid white;
+                border-left: 3px solid white;
+                border-right: 3px solid #7b7b7b;
+                border-bottom: 3px solid #7b7b7b;
+                box-sizing: border-box;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                &.opened {
+                    border: 1px solid #7b7b7b;
+                    .minesweeper-cell-content {
+                        font-size: 30px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-weight: bolder;
+                        user-select: none;
+                        &.color1 {
+                            color: blue;
+                        }
+                        &.color2 {
+                            color: green;
+                        }
+                        &.color3 {
+                            color: red;
+                        }
+                        &.color4 {
+                            color: darkblue;
+                        }
+                        &.color5 {
+                            color: brown;
+                        }
+                        &.color6 {
+                            color: cyan;
+                        }
+                        &.color7 {
+                            color: black;
+                        }
+                        &.color8 {
+                            color: grey;
+                        }
+                    }
+                }
+                &.pressed {
+                    border: none;
+                }
+            }
+        }
+    }
+}
